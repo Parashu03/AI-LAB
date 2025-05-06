@@ -30,14 +30,11 @@ def extract_name(message):
             return ent.text
     return None
 
-def preprocess_input(user_input):
-    user_input = user_input.lower() 
-    return user_input
 def main():
     print("Ask about a student's CIE mark (e.g., 'What is the mark of John?')\nType 'exit' to quit.")
     while True:
-        user_input = input("You: ")
-        user_input = preprocess_input(user_input)
+        user_input = input("You: ").lower()
+      
         
         if user_input in ["exit", "quit"]:
             break
